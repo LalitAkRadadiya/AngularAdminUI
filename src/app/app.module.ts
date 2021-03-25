@@ -13,6 +13,7 @@ import { ShowCompanyComponent } from './show-company/show-company.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
+import { DashboardComponent } from './dashboard/dashboard.component';
 export const environment = {
   production: true
 };
@@ -24,7 +25,8 @@ if (environment.production) {
   declarations: [
     AppComponent,
     AddEditCompanyComponent,
-    ShowCompanyComponent
+    ShowCompanyComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
