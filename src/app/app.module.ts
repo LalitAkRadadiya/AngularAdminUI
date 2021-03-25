@@ -9,6 +9,10 @@ import { HttpClientModule } from '@angular/common/http';
 import {enableProdMode} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AddEditCompanyComponent } from './add-edit-company/add-edit-company.component';
+import { ShowCompanyComponent } from './show-company/show-company.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ToastrModule } from 'ngx-toastr';
 export const environment = {
   production: true
 };
@@ -19,12 +23,15 @@ if (environment.production) {
 @NgModule({
   declarations: [
     AppComponent,
-    AddEditCompanyComponent
+    AddEditCompanyComponent,
+    ShowCompanyComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    BrowserAnimationsModule,
+     ToastrModule.forRoot(), 
     AppRoutingModule,
   ],
   providers: [SharedService],

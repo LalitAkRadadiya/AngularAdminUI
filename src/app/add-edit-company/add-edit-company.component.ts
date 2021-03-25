@@ -1,5 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SharedService} from '../sharedservice.service';
+
+
+import { ToastrService } from 'ngx-toastr';
+
 @Component({
   selector: 'app-add-edit-company',
   templateUrl: './add-edit-company.component.html',
@@ -7,7 +11,7 @@ import { SharedService} from '../sharedservice.service';
 })
 export class AddEditCompanyComponent implements OnInit {
 
-  constructor(private service : SharedService) { }
+  constructor(private service : SharedService, private toastr: ToastrService) { }
   @Input() companyList: any;
 
   addbutton = true;
@@ -31,6 +35,7 @@ export class AddEditCompanyComponent implements OnInit {
     };
     this.service.addList(val).subscribe(res => {
       console.log('list addedd');
+      this.toastr.success('Added SuccessFully!');
     });
   }
   saveUpdated(){
@@ -43,6 +48,8 @@ export class AddEditCompanyComponent implements OnInit {
      };
      this.service.editList(val).subscribe(res => {
        console.log('list updated');
+       this.toastr.success('Updated SuccessFully!');
+
      });
 
   }
