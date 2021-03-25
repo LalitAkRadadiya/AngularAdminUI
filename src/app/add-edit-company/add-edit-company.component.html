@@ -1,0 +1,56 @@
+<div class="form-group" style="background-color: rgba(158, 179, 175, 0.041);">
+        
+        <div class="row">
+            <label class="col-sm-2 col-form-label"> Id<span style="color: red;">*</span></label>
+            <div class="col-sm-5"></div>
+            <label class="col-sm-2 col-form-label">Email<span style="color: red;">*</span></label>
+        </div>
+        <div class="row">
+            <div class="col-sm-5">
+                <input type="text" [disabled]="!addbutton" class="form-control" placeholder="Id"   [(ngModel)]="companyList.id" >
+            </div>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" placeholder="Email" [(ngModel)]="companyList.Email"  >
+            </div>
+        </div>
+
+        <div class="row">
+                <label class="col-sm-2 col-form-label"> Name<span style="color: red;">*</span></label>
+                <div class="col-sm-5"></div>
+                <label class="col-sm-2 col-form-label">totalEmployee<span style="color: red;">*</span></label>
+            </div>
+            <div class="row">
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" placeholder="Name"   [(ngModel)]="companyList.Name">
+                </div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" placeholder="totalEmployee" [(ngModel)]="companyList.totalEmployee"  >
+                </div>
+            </div>
+
+
+            <div class="row">
+                    <label class="col-sm-2 col-form-label"> totalBranch<span style="color: red;">*</span></label>
+                    <!-- <div class="col-sm-5"></div> -->
+                    <!-- <label class="col-sm-2 col-form-label"> add branch<span style="color: red;">*</span></label> -->
+                </div>
+                <div class="row">
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" placeholder="totalBranch" [(ngModel)]="companyList.totalBranch" >
+                    </div>
+                  
+                </div>
+
+
+
+</div>
+
+<div style="text-align: center">
+
+        <button (click)="saveAdded()" *ngIf="addbutton"  type="button" class="btn btn-success">Add</button>
+
+        <button (click)="saveUpdated()" *ngIf="!addbutton" type="button" class="btn btn-success">Update</button>
+        <!-- <button data-bs-dismiss="modal" aria-label="Close" type="button" class="btn btn-danger">Cancel</button> -->
+    </div>
