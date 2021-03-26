@@ -35,6 +35,30 @@
         "branchName": "54654654",
         "address": "6546464"
       }
+    },
+    {
+      "id": "5444",
+      "Email": "64",
+      "Name": "646465",
+      "totalEmployee": "46464",
+      "totalBranch": "654",
+      "companyBarnch": {
+        "branchId": "vdfvd",
+        "branchName": "vdvdv",
+        "address": "fvdvdv"
+      }
+    },
+    {
+      "id": "trggtr",
+      "Email": "gtrgrg",
+      "Name": "rgrgtr",
+      "totalEmployee": "grgrg",
+      "totalBranch": "tgtrgr",
+      "companyBarnch": {
+        "branchId": "dc",
+        "branchName": "ecrec",
+        "address": "rcerfce"
+      }
     }
   ]
 }

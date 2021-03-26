@@ -5,7 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ShowCompanyComponent } from './show-company/show-company.component';
 
 const routes: Routes = [
-  {path: '',component: AppComponent},
+  {path: '',redirectTo: '/Dashboard', pathMatch: 'full'},
   {path:'Dashboard', component:DashboardComponent},
   {path: 'CompanyList', component: ShowCompanyComponent}
 ];

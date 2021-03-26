@@ -19,6 +19,8 @@ export class AddEditBranchComponent implements OnInit {
 
   saveAdded(){
     console.log('val', this.branchId, this.branchName, this.address, this.companyList.id);
+
+    console.log(this.companyList.companyBarnch);
     var val = {
       id : this.companyList.id,
       Email : this.companyList.Email,
@@ -41,7 +43,7 @@ export class AddEditBranchComponent implements OnInit {
      
     // };
     this.service.editList(val).subscribe(res => {
-      console.log('list edited');
+      console.log('list addedd');
       // this.toastr.success('Added SuccessFully!');
     });
   }

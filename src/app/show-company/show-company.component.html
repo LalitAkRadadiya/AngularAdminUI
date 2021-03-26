@@ -56,25 +56,25 @@
       <td>
 
         <span>
-          BranchId : {{data.companyBarnch.branchId}}
+          BranchId : {{(data.companyBarnch?.branchId) || 'NA'}}
         </span><br>
         <span>
-          Branch Name : {{data.companyBarnch.branchName}}
+          Branch Name : {{(data.companyBarnch?.branchName) || 'NA'}}
         </span><br>
         <span>
-          Address : {{data.companyBarnch.address}}
+          Address : {{(data.companyBarnch?.address) || 'NA'}}
         </span>
 
       </td>
       <td>
         <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal"
-          data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#myModalbranch"
+           data-toggle="modal" data-target="#myModalbranch"
           (click)="editList(data)">
           <i class="fa fa-plus" aria-hidden="true"> </i> &nbsp; Add Branch
         </button>
         
         <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal"
-          data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#myModal"
+           data-toggle="modal" data-target="#myModal"
           (click)="editList(data)">
           <i class="fas fa-edit"></i>&nbsp; Edit
         </button>

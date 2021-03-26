@@ -25,6 +25,7 @@ export class ShowCompanyComponent implements OnInit {
     this.service.getList().subscribe(data=>{
       console.log('data', data);
       this.getListData = data;
+      
 
       // this.getBranchList = this.getListData.companyBarnch;
       console.log('this.getBranchList',this.getBranchList);
