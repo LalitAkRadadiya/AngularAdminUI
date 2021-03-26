@@ -1,57 +1,93 @@
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="myModal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
 
-  <div class="modal fade"  data-backdrop="static" data-keyboard="false" id="myModal" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          
-          <h4  style="float: left; " class="modal-title">Modal Header</h4>
-          <button type="button" (click)='closeClick();' class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body" *ngIf="ActivateAddEditServiceComp">
-            <app-add-edit-company [companyList]="companyList" ></app-add-edit-company>
-        </div>
+        <h4 style="float: left; " class="modal-title">Modal Header</h4>
+        <button type="button" (click)='closeClick();' class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body" *ngIf="ActivateAddEditServiceComp">
+        <app-add-edit-company [companyList]="companyList"></app-add-edit-company>
       </div>
     </div>
   </div>
-  <button type="button" style="float:right;" class="btn btn-info btn-lg" data-toggle="modal" (click)="addList()" data-target="#myModal"><i class="fa fa-plus" aria-hidden="true"> </i> Add Service</button>
+</div>
+<button type="button" style="float:right;" class="btn btn-info btn-lg" data-toggle="modal" (click)="addList()"
+  data-target="#myModal"><i class="fa fa-plus" aria-hidden="true"> </i> Add Service</button>
+
+
+
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="myModalbranch" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <h4 style="float: left; " class="modal-title">Modal Header</h4>
+        <button type="button" (click)='closeClick();' class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body" *ngIf="ActivateAddEditServiceComp">
+        <app-add-edit-branch [companyList]="companyList"></app-add-edit-branch>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <table class="table">
-<thead>
-  <tr>
-    <th>id</th>
-    <th>Email</th>
-    <th>Name</th>
-    <th>totalEmployee</th>
-    <th>totalBranch</th>
-    <!-- <th>Branch</th> -->
-    <th>Action</th>
-  </tr>
-</thead>
-<tbody>
-  <tr *ngFor="let data of getListData">
-    <td>{{data.id}}</td>
-    <td>{{data.Email}}</td>
-    <td>{{data.Name}}</td>
-    <td>{{data.totalEmployee}}</td>
-    <td>{{data.totalBranch}}</td>
-    <!-- <td>
-      <div  *ngFor="let subdata of data.companyBranch">
-          <span>{{subdata.address}}</span>
-          <span>{{subdata.branchId}}</span>
-          <span>{{subdata.branch}}</span>
-      </div>
-    </td> -->
-    <td>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>Email</th>
+      <th>Name</th>
+      <th>total Employee</th>
+      <th>total Branch</th>
+      <th>Branch</th>
 
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of getListData">
+      <td>{{data.id}}</td>
+      <td>{{data.Email}}</td>
+      <td>{{data.Name}}</td>
+      <td>{{data.totalEmployee}}</td>
+      <td>{{data.totalBranch}}</td>
+      <td>
 
-      <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal"
-        data-backdrop="static" data-keyboard="false" data-toggle="modal"  data-target="#myModal" (click)="editList(data)">
-        <i class="fas fa-edit"></i>&nbsp; Edit
-      </button>
+        <span>
+          BranchId : {{data.companyBarnch.branchId}}
+        </span><br>
+        <span>
+          Branch Name : {{data.companyBarnch.branchName}}
+        </span><br>
+        <span>
+          Address : {{data.companyBarnch.address}}
+        </span>
 
-      <button class="btn btn-outline-danger" (click)="deleteList(data)">
-        <i class="fa fa-trash" aria-hidden="true"></i>&nbsp; Delete</button>
-    </td>
-  </tr>
-</tbody>
+      </td>
+      <td>
+        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#myModalbranch"
+          (click)="editList(data)">
+          <i class="fa fa-plus" aria-hidden="true"> </i> &nbsp; Add Branch
+        </button>
+        
+        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#myModal"
+          (click)="editList(data)">
+          <i class="fas fa-edit"></i>&nbsp; Edit
+        </button>
+
+        <button class="btn btn-outline-danger" (click)="deleteList(data)">
+          <i class="fa fa-trash" aria-hidden="true"></i>&nbsp; Delete</button>
+      </td>
+     
+    </tr>
+    <!-- <div  *ngFor="let subdata of getListData.companyBarnch">
+      <span>{{subdata.address}}</span>
+      <span>{{subdata.branchId}}</span>
+      <span>{{subdata.branch}}</span>
+  </div> -->
+  </tbody>
 </table>

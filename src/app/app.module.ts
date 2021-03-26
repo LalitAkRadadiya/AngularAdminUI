@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AddEditBranchComponent } from './add-edit-branch/add-edit-branch.component';
 export const environment = {
   production: true
 };
@@ -26,7 +27,8 @@ if (environment.production) {
     AppComponent,
     AddEditCompanyComponent,
     ShowCompanyComponent,
-    DashboardComponent
+    DashboardComponent,
+    AddEditBranchComponent
   ],
   imports: [
     BrowserModule,

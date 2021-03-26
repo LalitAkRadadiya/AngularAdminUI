@@ -5,21 +5,36 @@
       "Email": "Ang (1",
       "Name": "June 14",
       "totalEmployee": "41645465456",
-      "totalBranch": 4
+      "totalBranch": 4,
+      "companyBarnch": {
+        "branchId": "dede",
+        "branchName": "dede",
+        "address": "ded"
+      }
     },
     {
       "id": 2,
       "Email": "Angula",
       "Name": "June 14th, 2012",
       "totalEmployee": "4646546",
-      "totalBranch": "4"
+      "totalBranch": "4",
+      "companyBarnch": {
+        "branchId": "54646",
+        "branchName": "54654654",
+        "address": "6546464"
+      }
     },
     {
       "id": "564",
       "Email": "546",
       "Name": "546554",
       "totalEmployee": "5454",
-      "totalBranch": "6464"
+      "totalBranch": "6464",
+      "companyBarnch": {
+        "branchId": "54646",
+        "branchName": "54654654",
+        "address": "6546464"
+      }
     }
   ]
 }
