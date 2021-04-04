@@ -41,12 +41,7 @@
       "Email": "64",
       "Name": "646465",
       "totalEmployee": "46464",
-      "totalBranch": "654",
-      "companyBarnch": {
-        "branchId": "vdfvd",
-        "branchName": "vdvdv",
-        "address": "fvdvdv"
-      }
+      "totalBranch": "654"
     },
     {
       "id": "trggtr",
@@ -59,6 +54,46 @@
         "branchName": "ecrec",
         "address": "rcerfce"
       }
+    },
+    {
+      "id": "Dh31hOT",
+      "Email": "radadiya7lalit7@gmail.com",
+      "Name": "Lalit Radadiya",
+      "totalEmployee": "56534",
+      "totalBranch": "34534"
+    },
+    {
+      "id": "554",
+      "Email": "radadiya7lalit7@gmail.com",
+      "Name": "Lalit Radadiya",
+      "totalEmployee": "5",
+      "totalBranch": "5"
+    },
+    {
+      "id": "6565",
+      "Email": "abc@gmail.com",
+      "Name": "dsdd",
+      "totalEmployee": "5",
+      "totalBranch": "fchgyjhbmn"
+    },
+    {
+      "id": "25",
+      "Email": "radadiya7lalit7@gmail.com",
+      "Name": "Lalit Radadiya",
+      "totalEmployee": "5",
+      "totalBranch": "5",
+      "companyBarnch": {
+        "branchId": "da39bbbd-9d1d-41ad-a4b8-cbc721fde449",
+        "branchName": "lalit loda",
+        "address": "djsdjds"
+      }
+    },
+    {
+      "id": "fa4f17af-4ce6-41c4-a8d5-4ec77a51026c",
+      "Email": "X@gmail.com",
+      "Name": "465",
+      "totalEmployee": "6456456",
+      "totalBranch": "654"
     }
   ]
 }

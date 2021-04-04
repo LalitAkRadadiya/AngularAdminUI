@@ -12,6 +12,7 @@ import { AddEditCompanyComponent } from './add-edit-company/add-edit-company.com
 import { ShowCompanyComponent } from './show-company/show-company.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddEditBranchComponent } from './add-edit-branch/add-edit-branch.component';
@@ -34,6 +35,7 @@ if (environment.production) {
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
      ToastrModule.forRoot(), 
     AppRoutingModule,

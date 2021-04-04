@@ -1,3 +1,4 @@
+<form [formGroup]="addForm" (ngSubmit)="saveAdded()">
 <div class="form-group" style="background-color: rgba(158, 179, 175, 0.041);">
         
         <div class="row">
@@ -7,11 +8,17 @@
         </div>
         <div class="row">
             <div class="col-sm-5">
-                <input type="text" [disabled]="!addbutton" class="form-control" placeholder="Id"   [(ngModel)]="companyList.id" >
+                <input type="text" [disabled]="!addbutton" class="form-control" placeholder="Id" formControlName="id"  [ngClass]="{ 'is-invalid': submitted && f.id.errors }" >
+                <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
+                    <div *ngIf="f.id.errors.required">ID is required</div>
+                </div>
             </div>
             <div class="col-sm-2"></div>
             <div class="col-sm-5">
-                <input type="text" class="form-control" placeholder="Email" [(ngModel)]="companyList.Email"  >
+                <input type="text" class="form-control" placeholder="Email" formControlName="Email"  [ngClass]="{ 'is-invalid': submitted && f.Email.errors }" >
+                <div *ngIf="submitted && f.Email.errors" class="invalid-feedback">
+                    <div *ngIf="f.Email.errors.required">Email is required</div>
+                </div>
             </div>
         </div>
 
@@ -22,12 +29,18 @@
             </div>
             <div class="row">
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" placeholder="Name"   [(ngModel)]="companyList.Name">
+                    <input type="text" class="form-control" placeholder="Name"  formControlName="Name"  [ngClass]="{ 'is-invalid': submitted && f.Name.errors }" >
+                    <div *ngIf="submitted && f.Name.errors" class="invalid-feedback">
+                        <div *ngIf="f.Name.errors.required">Name is required</div>
+                    </div>
                 </div>
                 <div class="col-sm-2"></div>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" placeholder="Total Employee" [(ngModel)]="companyList.totalEmployee"  >
-                </div>
+                    <input type="text" class="form-control" placeholder="Total Employee" formControlName="totalEmployee"  [ngClass]="{ 'is-invalid': submitted && f.totalEmployee.errors }" >
+                    <div *ngIf="submitted && f.totalEmployee.errors" class="invalid-feedback">
+                        <div *ngIf="f.totalEmployee.errors.required">totalEmployee is required</div>
+                    </div>
+                    </div>
             </div>
 
 
@@ -38,9 +51,11 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" placeholder="Total Branch" [(ngModel)]="companyList.totalBranch" >
-                    </div>
-                  
+                        <input type="text" class="form-control" placeholder="Total Branch" formControlName="totalBranch"  [ngClass]="{ 'is-invalid': submitted && f.totalBranch.errors }" >
+                        <div *ngIf="submitted && f.totalBranch.errors" class="invalid-feedback">
+                            <div *ngIf="f.totalBranch.errors.required">totalBranch is required</div>
+                        </div>
+                        </div>
                 </div>
 
 
@@ -49,8 +64,9 @@
 
 <div style="text-align: center">
 
-        <button (click)="saveAdded()" *ngIf="addbutton"  type="button" class="btn btn-success">Add</button>
+        <button *ngIf="addbutton"  type="submit" class="btn btn-success">Add</button>
 
-        <button (click)="saveUpdated()" *ngIf="!addbutton" type="button" class="btn btn-success">Update</button>
+        <button  *ngIf="!addbutton" type="submit" class="btn btn-success">Update</button>
         <!-- <button data-bs-dismiss="modal" aria-label="Close" type="button" class="btn btn-danger">Cancel</button> -->
     </div>
+</form>
